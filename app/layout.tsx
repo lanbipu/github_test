@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import React from 'react'
 import './globals.css'
-import { NotificationProvider } from '@/components/NotificationProvider'
 
 export const metadata: Metadata = {
   title: 'OSC 设备控制器 - 实时参数调控',
@@ -21,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <body className="bg-background text-foreground">
-        <NotificationProvider>{children}</NotificationProvider>
-      </body>
+      <body className="bg-background text-foreground">{children}</body>
     </html>
   )
 }
